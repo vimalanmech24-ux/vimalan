@@ -1,4 +1,110 @@
-my sql #
-my file{}
-myfile2{}
-myfile 3{}
+# ALL PROGRAMS RE-EDITED STRICTLY AS PER GIVEN CONDITIONS (SINGLE JUPYTER RUN)
+
+# 1) Classic Right-Angled Triangle (Nested for loops)
+print("1) Right-Angled Triangle")
+n = 5
+for i in range(1, n + 1):
+    for j in range(i):
+        print("*", end="")
+    print()
+
+
+# 2) Inverted Pyramid (range with step)
+print("\n2) Inverted Pyramid")
+for i in range(n, 0, -1):
+    for j in range(i):
+        print("*", end="")
+    print()
+
+
+# 3) Square Number Matrix (end parameter)
+print("\n3) Square Number Matrix")
+for i in range(5):
+    for j in range(1, 6):
+        print(j, end=" ")
+    print()
+
+
+# 4) Arithmetic Progression (formula based)
+print("\n4) Arithmetic Progression")
+a, d, terms = 2, 3, 5
+for i in range(terms):
+    term = a + (i * d)
+    print(term, end=" ")
+print()
+
+
+# 5) Floyd’s Triangle (separate increment variable)
+print("\n5) Floyd’s Triangle")
+count = 1
+for i in range(1, 5):
+    for j in range(i):
+        print(count, end=" ")
+        count += 1
+    print()
+
+
+# 6) Diamond Pattern (space padding & symmetry)
+print("\n6) Diamond Pattern")
+n = 3
+for i in range(1, n + 1):
+    print(" " * (n - i), end="")
+    for j in range(2 * i - 1):
+        print("*", end="")
+    print()
+
+for i in range(n - 1, 0, -1):
+    print(" " * (n - i), end="")
+    for j in range(2 * i - 1):
+        print("*", end="")
+    print()
+
+
+# 7) Palindromic Number Pyramid (increasing + decreasing)
+print("\n7) Palindromic Number Pyramid")
+n = 4
+for i in range(1, n + 1):
+    print(" " * (n - i), end="")
+    for j in range(1, i + 1):
+        print(j, end="")
+    for j in range(i - 1, 0, -1):
+        print(j, end="")
+    print()
+
+
+# 8) Geometric Progression (powers)
+print("\n8) Geometric Progression")
+a, r, terms = 2, 3, 4
+for i in range(terms):
+    term = a * (r ** i)
+    print(term, end=" ")
+print()
+
+
+# 9) Pascal’s Triangle (previous row logic)
+print("\n9) Pascal’s Triangle")
+rows = 5
+triangle = []
+
+for i in range(rows):
+    row = [1] * (i + 1)
+    for j in range(1, i):
+        row[j] = triangle[i - 1][j - 1] + triangle[i - 1][j]
+    triangle.append(row)
+
+for row in triangle:
+    for val in row:
+        print(val, end=" ")
+    print()
+
+
+# 10) Binary Pattern (row + column modulo)
+print("\n10) Binary Pattern")
+n = 4
+for i in range(n):
+    for j in range(n):
+        if (i + j) % 2 == 0:
+            print(1, end=" ")
+        else:
+            print(0, end=" ")
+    print()
